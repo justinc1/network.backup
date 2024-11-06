@@ -31,7 +31,8 @@ controller_templates:
     labels: operations
     credentials: cml-instance
     survey_enabled: true
-    survey_spec: "{{ lookup('template', '{{ playbook_dir }}/templates/backup.j2') }}"
+    # experience.path - path to setup.yml, it is set by seedseed repo
+    survey_spec: "{{ lookup('template', experience.path.replace('setup.yml', '') + 'playbooks/template_surveys/backup.j2') | from_json }}"
     execution_environment: ee_network.backup_backup
   - name:  Operations / Create Differential Network Backup Job
     inventory: Network Validated Inventory
