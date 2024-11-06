@@ -8,7 +8,7 @@ controller_labels:
 # Projects
 #
 controller_projects:
-  - name: Network Experience Backup Project
+  - name: Network Backup Automation Experience Project
     organization: Default
     scm_branch: main
     scm_clean: 'no'
